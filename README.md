@@ -1,6 +1,6 @@
-# 📌 Proyecto Web Completo: Sistema de Turnos + Manual Interactivo
+#  Proyecto Web Completo: Sistema de Turnos + Manual Interactivo
 
-## 🧾 Descripción general
+##  Descripción general
 Este proyecto está compuesto por dos partes principales desarrolladas como parte de un trabajo académico de desarrollo web:
 
 1. Un **Sistema de Turnos Web**
@@ -10,23 +10,23 @@ Ambos proyectos están diseñados para practicar el uso de HTML, CSS y JavaScrip
 
 ---
 
-# 🟦 PARTE 1: SISTEMA DE TURNOS WEB
+#  PARTE 1: SISTEMA DE TURNOS WEB
 
-## 🎯 Objetivo
+##  Objetivo
 El objetivo de esta parte es simular un sistema básico de asignación de turnos mediante una interfaz web sencilla.
 
-## ⚙️ Funcionalidades
+##  Funcionalidades
 - Generación de turnos
 - Visualización de turnos asignados
 - Interfaz simple e intuitiva
 - Navegación básica entre secciones
 
-## 🧱 Tecnologías utilizadas
+##  Tecnologías utilizadas
 - HTML5
 - CSS3
 - JavaScript
 
-## 📁 Estructura del proyecto
+##  Estructura del proyecto
 
 /turnos
 ├── index.html
@@ -37,19 +37,19 @@ El objetivo de esta parte es simular un sistema básico de asignación de turnos
 └── assets/
 
 
-## 🚀 Ejecución
+##  Ejecución
 1. Abrir la carpeta del proyecto
 2. Ejecutar el archivo `index.html` en el navegador
 3. Interactuar con el sistema de turnos
 
 ---
 
-# 🟩 PARTE 2: MANUAL INTERACTIVO DE ESTRUCTURA DE DATOS
+#  PARTE 2: MANUAL INTERACTIVO DE ESTRUCTURA DE DATOS
 
-## 🎯 Objetivo
+##  Objetivo
 Desarrollar un manual educativo interactivo que permita aprender Estructura de Datos de forma organizada por temas.
 
-## 📘 Contenido
+##  Contenido
 El manual está dividido en 12 temas:
 
 - Tema 01: Introducción
@@ -71,12 +71,12 @@ El manual está dividido en 12 temas:
 - Organización modular por carpetas
 - Interfaz educativa e interactiva
 
-## 🧱 Tecnologías utilizadas
+##  Tecnologías utilizadas
 - HTML5
 - CSS3
 - JavaScript
 
-## 📁 Estructura del proyecto
+##  Estructura del proyecto
 
 /manual-estructura-datos
 ├── index.html
@@ -98,17 +98,17 @@ El manual está dividido en 12 temas:
 └── assets/
 
 
-## 🚀 Ejecución
+##  Ejecución
 1. Abrir la carpeta del proyecto
 2. Ingresar al archivo `index.html`
 3. Navegar entre los temas desde el menú principal
 
 ---
 
-# 👨‍💻 Autor
+#  Autor
 Proyecto académico — Ingeniería de Sistemas
 
 ---
 
-# 📌 Nota
+#  Nota
 Este proyecto fue desarrollado con fines educativos para reforzar conocimientos en desarrollo web, estructura de datos y organización de proyectos.
