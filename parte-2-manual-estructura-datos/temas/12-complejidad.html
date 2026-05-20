@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Manual web sobre Complejidad Algorítmica: mide el rendimiento y eficiencia de los algoritmos.">
+
+<title>Complejidad · Manual Web</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+<div class="background-blur blur-1"></div>
+<div class="background-blur blur-2"></div>
+
+<header class="hero small-hero">
+
+    <h1>Complejidad Algorítmica</h1>
+
+    <p>
+    Aprende cómo medir el rendimiento
+    y eficiencia de los algoritmos.
+    </p>
+
+    <a href="../index.html" class="btn-primary">
+    ⬅ Volver al Inicio
+    </a>
+
+</header>
+
+<main class="container">
+
+    <section class="section">
+
+    <h2>Documentación</h2>
+
+    <div class="glass-box">
+
+        <h3>¿Qué es la Complejidad Algorítmica?</h3>
+
+        <p>
+        La complejidad algorítmica mide
+        el tiempo y memoria que necesita
+        un algoritmo para ejecutarse.
+        </p>
+
+        <h3>Características</h3>
+
+        <ul>
+        <li>Evalúa eficiencia.</li>
+        <li>Analiza tiempo y espacio.</li>
+        <li>Usa notación Big O.</li>
+        <li>Permite comparar algoritmos.</li>
+        </ul>
+
+        <h3>Casos de Uso</h3>
+
+        <ul>
+        <li>Optimización de software.</li>
+        <li>Evaluación de rendimiento.</li>
+        <li>Diseño de algoritmos.</li>
+        <li>Procesamiento de datos.</li>
+        </ul>
+
+    </div>
+
+    </section>
+
+    <section class="section">
+
+    <h2>Ejemplos Resueltos</h2>
+
+    <div class="example-card">
+
+        <div class="example-header">
+        <h3>Ejemplo 1 · O(1)</h3>
+        <button onclick="copyCode(this)">Copiar</button>
+        </div>
+
+<pre><code>int x = arreglo[0];</code></pre>
+
+    </div>
+
+    <div class="example-card">
+
+        <div class="example-header">
+        <h3>Ejemplo 2 · O(n)</h3>
+        <button onclick="copyCode(this)">Copiar</button>
+        </div>
+
+<pre><code>for(int i = 0; i &lt; n; i++){
+
+    System.out.println(i);
+
+}</code></pre>
+
+    </div>
+
+    <div class="example-card">
+
+        <div class="example-header">
+        <h3>Ejemplo 3 · O(n²)</h3>
+        <button onclick="copyCode(this)">Copiar</button>
+        </div>
+
+<pre><code>for(int i = 0; i &lt; n; i++){
+
+    for(int j = 0; j &lt; n; j++){
+
+        System.out.println(i + j);
+
+    }
+
+}</code></pre>
+
+    </div>
+
+    <div class="example-card">
+
+        <div class="example-header">
+        <h3>Ejemplo 4 · O(log n)</h3>
+        <button onclick="copyCode(this)">Copiar</button>
+        </div>
+
+<pre><code>while(n &gt; 1){
+
+    n = n / 2;
+
+}</code></pre>
+
+    </div>
+
+    <div class="example-card">
+
+        <div class="example-header">
+        <h3>Ejemplo 5 · Búsqueda Binaria</h3>
+        <button onclick="copyCode(this)">Copiar</button>
+        </div>
+
+<pre><code>int mitad = (inicio + fin) / 2;</code></pre>
+
+    </div>
+
+    <div class="example-card">
+
+        <div class="example-header">
+        <h3>Ejemplo 6 · Bubble Sort</h3>
+        <button onclick="copyCode(this)">Copiar</button>
+        </div>
+
+<pre><code>for(int i = 0; i &lt; n; i++){
+
+    for(int j = 0; j &lt; n - 1; j++){
+
+    }
+
+}</code></pre>
+
+    </div>
+
+    <div class="example-card">
+
+        <div class="example-header">
+        <h3>Ejemplo 7 · Merge Sort</h3>
+        <button onclick="copyCode(this)">Copiar</button>
+        </div>
+
+<pre><code>Complejidad: O(n log n)</code></pre>
+
+    </div>
+
+    <div class="example-card">
+
+        <div class="example-header">
+        <h3>Ejemplo 8 · Espacio O(n)</h3>
+        <button onclick="copyCode(this)">Copiar</button>
+        </div>
+
+<pre><code>int[] arreglo = new int[n];</code></pre>
+
+    </div>
+
+    <div class="example-card">
+
+        <div class="example-header">
+        <h3>Ejemplo 9 · Recursividad</h3>
+        <button onclick="copyCode(this)">Copiar</button>
+        </div>
+
+<pre><code>factorial(n - 1);</code></pre>
+
+    </div>
+
+    <div class="example-card">
+
+        <div class="example-header">
+        <h3>Ejemplo 10 · Complejidad Total</h3>
+        <button onclick="copyCode(this)">Copiar</button>
+        </div>
+
+<pre><code>Tiempo: O(n²)
+
+Espacio: O(n)</code></pre>
+
+    </div>
+
+    </section>
+
+    <section class="section">
+
+    <h2>Retos Propuestos</h2>
+
+    <div class="challenge-card">
+
+        <h3>Reto 1 · Identificar O(1)</h3>
+        <p>Encuentra un algoritmo constante.</p>
+        <div class="tip">Recomendación: Busca acceso directo.</div>
+
+    </div>
+
+    <div class="challenge-card">
+
+        <h3>Reto 2 · Analizar O(n)</h3>
+        <p>Analiza un recorrido lineal.</p>
+        <div class="tip">Recomendación: Usa un solo ciclo.</div>
+
+    </div>
+
+    <div class="challenge-card">
+
+        <h3>Reto 3 · Analizar O(n²)</h3>
+        <p>Evalúa ciclos anidados.</p>
+        <div class="tip">Recomendación: Usa doble for.</div>
+
+    </div>
+
+    <div class="challenge-card">
+
+        <h3>Reto 4 · Búsqueda Binaria</h3>
+        <p>Implementa una búsqueda binaria.</p>
+        <div class="tip">Recomendación: Divide el arreglo.</div>
+
+    </div>
+
+    <div class="challenge-card">
+
+        <h3>Reto 5 · Comparar Algoritmos</h3>
+        <p>Compara dos complejidades diferentes.</p>
+        <div class="tip">Recomendación: Analiza tiempo y memoria.</div>
+
+    </div>
+
+    </section>
+
+    <section class="section">
+
+    <h2>Video Explicativo</h2>
+
+    <div class="video-container">
+
+        <iframe
+        src="https://www.youtube.com/embed/SCgWisKdJLA"
+        title="Complejidad"
+        loading="lazy"
+        frameborder="0"
+        allowfullscreen>
+        </iframe>
+
+    </div>
+
+    </section>
+
+</main>
+
+<footer class="footer">
+
+    <p>
+    Manual Web de Estructura de Datos · 2026
+    </p>
+
+</footer>
+
+<script src="../js/main.js"></script>
+
+</body>
+</html>

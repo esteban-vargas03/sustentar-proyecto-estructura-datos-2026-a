@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Manual web sobre Grafos: conexiones entre nodos y recorridos avanzados.">
+
+<title>Grafos · Manual Web</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+<div class="background-blur blur-1"></div>
+<div class="background-blur blur-2"></div>
+
+<header class="hero small-hero">
+
+    <h1>Grafos</h1>
+
+    <p>
+    Aprende cómo funcionan los grafos,
+    conexiones entre nodos y recorridos avanzados.
+    </p>
+
+    <a href="../index.html" class="btn-primary">
+    ⬅ Volver al Inicio
+    </a>
+
+</header>
+
+<main class="container">
+
+<section class="section">
+
+<h2>Documentación</h2>
+
+<div class="glass-box">
+
+    <h3>¿Qué es un Grafo?</h3>
+
+    <p>
+    Un grafo es una estructura de datos formada por vértices y aristas que representan relaciones entre elementos.
+    </p>
+
+    <h3>Características</h3>
+
+    <ul>
+    <li>Conjunto de nodos y conexiones.</li>
+    <li>Puede ser dirigido o no dirigido.</li>
+    <li>Permite recorridos complejos.</li>
+    <li>Representa relaciones reales.</li>
+    </ul>
+
+    <h3>Casos de Uso</h3>
+
+    <ul>
+    <li>Redes sociales.</li>
+    <li>GPS y rutas.</li>
+    <li>Internet.</li>
+    <li>Sistemas de recomendación.</li>
+    </ul>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Ejemplos Resueltos</h2>
+
+<div class="example-card">
+
+    <div class="example-header">
+    <h3>Ejemplo 1 · Crear Grafo</h3>
+    <button onclick="copyCode(this)">Copiar</button>
+    </div>
+
+<pre><code>Graph grafo = new Graph();</code></pre>
+
+</div>
+
+<div class="example-card">
+
+    <div class="example-header">
+    <h3>Ejemplo 2 · Agregar Nodo</h3>
+    <button onclick="copyCode(this)">Copiar</button>
+    </div>
+
+<pre><code>grafo.agregarNodo("A");</code></pre>
+
+</div>
+
+<div class="example-card">
+
+    <div class="example-header">
+    <h3>Ejemplo 3 · Agregar Arista</h3>
+    <button onclick="copyCode(this)">Copiar</button>
+    </div>
+
+<pre><code>grafo.agregarArista("A", "B");</code></pre>
+
+</div>
+
+<div class="example-card">
+
+    <div class="example-header">
+    <h3>Ejemplo 4 · Recorrido DFS</h3>
+    <button onclick="copyCode(this)">Copiar</button>
+    </div>
+
+<pre><code>dfs("A");</code></pre>
+
+</div>
+
+<div class="example-card">
+
+    <div class="example-header">
+    <h3>Ejemplo 5 · Recorrido BFS</h3>
+    <button onclick="copyCode(this)">Copiar</button>
+    </div>
+
+<pre><code>bfs("A");</code></pre>
+
+</div>
+
+<div class="example-card">
+
+    <div class="example-header">
+    <h3>Ejemplo 6 · Lista Adyacencia</h3>
+    <button onclick="copyCode(this)">Copiar</button>
+    </div>
+
+<pre><code>HashMap&lt;String, List&lt;String&gt;&gt; grafo;</code></pre>
+
+</div>
+
+<div class="example-card">
+
+    <div class="example-header">
+    <h3>Ejemplo 7 · Verificar Nodo</h3>
+    <button onclick="copyCode(this)">Copiar</button>
+    </div>
+
+<pre><code>grafo.containsKey("A");</code></pre>
+
+</div>
+
+<div class="example-card">
+
+    <div class="example-header">
+    <h3>Ejemplo 8 · Grafo Dirigido</h3>
+    <button onclick="copyCode(this)">Copiar</button>
+    </div>
+
+<pre><code>grafo.agregarArista("A", "B");</code></pre>
+
+</div>
+
+<div class="example-card">
+
+    <div class="example-header">
+    <h3>Ejemplo 9 · Grafo No Dirigido</h3>
+    <button onclick="copyCode(this)">Copiar</button>
+    </div>
+
+<pre><code>grafo.agregarArista("A", "B");
+grafo.agregarArista("B", "A");</code></pre>
+
+</div>
+
+<div class="example-card">
+
+    <div class="example-header">
+    <h3>Ejemplo 10 · Grafo Completo</h3>
+    <button onclick="copyCode(this)">Copiar</button>
+    </div>
+
+<pre><code>grafo.agregarNodo("A");
+grafo.agregarNodo("B");
+
+grafo.agregarArista("A", "B");</code></pre>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Retos Propuestos</h2>
+
+<div class="challenge-card">
+<h3>Reto 1 · Crear Grafo</h3>
+<p>Crea un grafo con 5 nodos.</p>
+<div class="tip">Usa listas de adyacencia.</div>
+</div>
+
+<div class="challenge-card">
+<h3>Reto 2 · Agregar Aristas</h3>
+<p>Conecta varios nodos entre sí.</p>
+<div class="tip">Usa relaciones bidireccionales.</div>
+</div>
+
+<div class="challenge-card">
+<h3>Reto 3 · Recorrido DFS</h3>
+<p>Implementa recorrido DFS.</p>
+<div class="tip">Usa recursividad.</div>
+</div>
+
+<div class="challenge-card">
+<h3>Reto 4 · Recorrido BFS</h3>
+<p>Implementa recorrido BFS.</p>
+<div class="tip">Usa una cola.</div>
+</div>
+
+<div class="challenge-card">
+<h3>Reto 5 · Grafo Dirigido</h3>
+<p>Construye un grafo dirigido.</p>
+<div class="tip">Conecta nodos en una sola dirección.</div>
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Video Explicativo</h2>
+
+<div class="video-container">
+
+<iframe
+src="https://www.youtube.com/embed/wo3PHwcWG8w"
+title="Grafos"
+loading="lazy"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</section>
+
+</main>
+
+<footer class="footer">
+
+<p>
+Manual Web de Estructura de Datos · 2026
+</p>
+
+</footer>
+
+<script src="../js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Listas Enlazadas Simples en Java: nodos, referencias y recorrido dinámico de datos.">
+
+<title>Listas Simples · Manual Web</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+<div class="background-blur blur-1"></div>
+<div class="background-blur blur-2"></div>
+
+<header class="hero small-hero">
+
+<h1>Listas Enlazadas Simples</h1>
+
+<p>
+Aprende cómo funcionan las listas enlazadas simples, nodos, referencias y recorrido dinámico de datos.
+</p>
+
+<a href="../index.html" class="btn-primary">⬅ Volver al Inicio</a>
+
+</header>
+
+<main class="container">
+
+<section class="section">
+<h2>Documentación</h2>
+
+<div class="glass-box">
+
+<h3>¿Qué es una lista enlazada?</h3>
+<p>Es una estructura de datos dinámica formada por nodos conectados mediante referencias.</p>
+
+<h3>Utilidad</h3>
+<p>Permite almacenar y gestionar datos de forma dinámica sin tamaño fijo.</p>
+
+<h3>Características</h3>
+<ul>
+<li>Estructura dinámica.</li>
+<li>Uso de nodos.</li>
+<li>No requiere tamaño fijo.</li>
+<li>Acceso secuencial.</li>
+</ul>
+
+<h3>Casos de uso</h3>
+<ul>
+<li>Historial de navegación.</li>
+<li>Reproductores multimedia.</li>
+<li>Navegadores web.</li>
+<li>Sistemas dinámicos.</li>
+</ul>
+
+</div>
+</section>
+
+<section class="section">
+<h2>Ejemplos Resueltos</h2>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 1 · Nodo</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<pre><code>
+class Nodo {
+    int dato;
+    Nodo siguiente;
+
+    public Nodo(int dato) {
+        this.dato = dato;
+        this.siguiente = null;
+    }
+}
+</code></pre>
+</div>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 2 · Lista</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<pre><code>
+class Lista {
+    Nodo cabeza;
+
+    public Lista() {
+        cabeza = null;
+    }
+}
+</code></pre>
+</div>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 3 · Insertar inicio</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<pre><code>
+public void insertar(int dato) {
+    Nodo nuevo = new Nodo(dato);
+    nuevo.siguiente = cabeza;
+    cabeza = nuevo;
+}
+</code></pre>
+</div>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 4 · Recorrer</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<pre><code>
+public void mostrar() {
+    Nodo actual = cabeza;
+
+    while (actual != null) {
+        System.out.println(actual.dato);
+        actual = actual.siguiente;
+    }
+}
+</code></pre>
+</div>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 5 · Buscar</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<pre><code>
+public boolean buscar(int valor) {
+    Nodo actual = cabeza;
+
+    while (actual != null) {
+        if (actual.dato == valor) {
+            return true;
+        }
+        actual = actual.siguiente;
+    }
+
+    return false;
+}
+</code></pre>
+</div>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 6 · Contar nodos</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<pre><code>
+public int contar() {
+    int contador = 0;
+    Nodo actual = cabeza;
+
+    while (actual != null) {
+        contador++;
+        actual = actual.siguiente;
+    }
+
+    return contador;
+}
+</code></pre>
+</div>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 7 · Eliminar inicio</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<pre><code>
+public void eliminar() {
+    if (cabeza != null) {
+        cabeza = cabeza.siguiente;
+    }
+}
+</code></pre>
+</div>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 8 · Vacía</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<pre><code>
+public boolean estaVacia() {
+    return cabeza == null;
+}
+</code></pre>
+</div>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 9 · Primero</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<pre><code>
+public int obtenerPrimero() {
+    return cabeza.dato;
+}
+</code></pre>
+</div>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 10 · Insertar final</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<pre><code>
+public void insertarFinal(int dato) {
+    Nodo nuevo = new Nodo(dato);
+
+    if (cabeza == null) {
+        cabeza = nuevo;
+        return;
+    }
+
+    Nodo actual = cabeza;
+
+    while (actual.siguiente != null) {
+        actual = actual.siguiente;
+    }
+
+    actual.siguiente = nuevo;
+}
+</code></pre>
+</div>
+
+</section>
+
+<section class="section">
+<h2>Retos Propuestos</h2>
+
+<div class="challenge-card"><h3>Reto 1 · Insertar inicio</h3><p>Inserta nodos al inicio.</p></div>
+<div class="challenge-card"><h3>Reto 2 · Buscar</h3><p>Busca un elemento en la lista.</p></div>
+<div class="challenge-card"><h3>Reto 3 · Contar</h3><p>Cuenta los nodos.</p></div>
+<div class="challenge-card"><h3>Reto 4 · Eliminar</h3><p>Elimina el primer nodo.</p></div>
+<div class="challenge-card"><h3>Reto 5 · Insertar final</h3><p>Inserta al final de la lista.</p></div>
+
+</section>
+
+<section class="section">
+<h2>Video Explicativo</h2>
+
+<div class="video-container">
+<iframe
+src="https://www.youtube.com/embed/4LRnwTj4eDQ"
+title="Listas enlazadas"
+allowfullscreen>
+</iframe>
+</div>
+
+</section>
+
+</main>
+
+<footer class="footer">
+<p>Manual Web de Estructura de Datos · 2026</p>
+</footer>
+
+<script src="../js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Manual web sobre árboles AVL: balanceo automático y rotaciones eficientes.">
+
+<title>AVL · Manual Web</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+<div class="background-blur blur-1"></div>
+<div class="background-blur blur-2"></div>
+
+
+<header class="hero small-hero">
+
+    <h1>Árboles AVL</h1>
+
+    <p>
+    Aprende cómo funcionan los árboles AVL, balanceo automático y rotaciones eficientes.
+    </p>
+
+    <a href="../index.html" class="btn-primary">
+    ⬅ Volver al Inicio
+    </a>
+
+</header>
+
+
+<main class="container">
+
+
+<section class="section">
+
+<h2>Documentación</h2>
+
+<div class="glass-box">
+
+<h3>¿Qué es un Árbol AVL?</h3>
+
+<p>
+Un árbol AVL es un árbol binario de búsqueda auto-balanceado que mantiene equilibrada la altura de sus subárboles.
+</p>
+
+<h3>Características</h3>
+
+<ul>
+<li>Árbol auto-balanceado.</li>
+<li>Rotaciones automáticas.</li>
+<li>Búsquedas eficientes.</li>
+<li>Optimización de rendimiento.</li>
+</ul>
+
+<h3>Casos de Uso</h3>
+
+<ul>
+<li>Bases de datos.</li>
+<li>Sistemas de búsqueda.</li>
+<li>Índices optimizados.</li>
+<li>Procesamiento eficiente.</li>
+</ul>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>Ejemplos Resueltos</h2>
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 1 · Nodo AVL</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+
+<pre><code>class Nodo {
+
+    int dato;
+    int altura;
+
+}</code></pre>
+
+</div>
+
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 2 · Altura Nodo</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+
+<pre><code>int altura = 1;</code></pre>
+
+</div>
+
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 3 · Rotación Derecha</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+
+<pre><code>Nodo x = y.izquierdo;</code></pre>
+
+</div>
+
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 4 · Rotación Izquierda</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+
+<pre><code>Nodo y = x.derecho;</code></pre>
+
+</div>
+
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 5 · Factor Balance</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+
+<pre><code>int balance = altura(izq) - altura(der);</code></pre>
+
+</div>
+
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 6 · Insertar Nodo</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+
+<pre><code>raiz = insertar(raiz, dato);</code></pre>
+
+</div>
+
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 7 · Verificar Balance</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+
+<pre><code>if(balance > 1){
+
+    System.out.println("Desbalanceado");
+
+}</code></pre>
+
+</div>
+
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 8 · Recorrido InOrden</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+
+<pre><code>inOrden(raiz.izquierdo);
+
+System.out.println(raiz.dato);
+
+inOrden(raiz.derecho);</code></pre>
+
+</div>
+
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 9 · Buscar Nodo</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+
+<pre><code>public boolean buscar(Nodo raiz, int valor){
+
+    if(raiz == null){
+        return false;
+    }
+
+    if(raiz.dato == valor){
+        return true;
+    }
+
+    return buscar(raiz.izquierdo, valor) || buscar(raiz.derecho, valor);
+}</code></pre>
+
+</div>
+
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 10 · AVL Completo</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+
+<pre><code>AVL arbol = new AVL();
+
+arbol.insertar(10);</code></pre>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>Retos Propuestos</h2>
+
+<div class="challenge-card">
+
+<h3>Reto 1 · Insertar Datos</h3>
+<p>Inserta nodos en un árbol AVL.</p>
+<div class="tip">Recomendación: usa balanceo automático.</div>
+
+</div>
+
+<div class="challenge-card">
+
+<h3>Reto 2 · Rotación Derecha</h3>
+<p>Implementa una rotación derecha.</p>
+<div class="tip">Recomendación: ajusta referencias.</div>
+
+</div>
+
+<div class="challenge-card">
+
+<h3>Reto 3 · Rotación Izquierda</h3>
+<p>Implementa una rotación izquierda.</p>
+<div class="tip">Recomendación: reorganiza nodos.</div>
+
+</div>
+
+<div class="challenge-card">
+
+<h3>Reto 4 · Calcular Balance</h3>
+<p>Calcula el factor de balance.</p>
+<div class="tip">Recomendación: resta alturas.</div>
+
+</div>
+
+<div class="challenge-card">
+
+<h3>Reto 5 · Buscar Nodo</h3>
+<p>Busca un nodo dentro del AVL.</p>
+<div class="tip">Recomendación: usa recursividad.</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>Video Explicativo</h2>
+
+<div class="video-container">
+
+<iframe
+src="https://www.youtube.com/embed/OiFCXu7xaSU"
+title="AVL"
+loading="lazy"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</section>
+
+</main>
+
+<footer class="footer">
+
+<p>
+Manual Web de Estructura de Datos · 2026
+</p>
+
+</footer>
+
+<script src="../js/main.js"></script>
+
+</body>
+</html>

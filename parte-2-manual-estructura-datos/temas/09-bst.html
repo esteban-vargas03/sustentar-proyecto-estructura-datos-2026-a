@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BST · Manual Web</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+<div class="background-blur blur-1"></div>
+<div class="background-blur blur-2"></div>
+
+
+<header class="hero small-hero">
+
+    <h1>Árboles BST</h1>
+
+    <p>
+    Aprende cómo funcionan los árboles binarios de búsqueda y la organización ordenada de datos.
+    </p>
+
+    <a href="../index.html" class="btn-primary">
+    ⬅ Volver al Inicio
+    </a>
+
+</header>
+
+
+<main class="container">
+
+
+<section class="section">
+
+<h2>Documentación</h2>
+
+<div class="glass-box">
+
+<h3>¿Qué es un BST?</h3>
+
+<p>
+Un Binary Search Tree es un árbol binario donde los nodos menores van a la izquierda y los mayores a la derecha.
+</p>
+
+<h3>Características</h3>
+
+<ul>
+<li>Búsqueda eficiente.</li>
+<li>Datos ordenados.</li>
+<li>Inserción dinámica.</li>
+<li>Recorridos rápidos.</li>
+</ul>
+
+<h3>Casos de Uso</h3>
+
+<ul>
+<li>Sistemas de búsqueda.</li>
+<li>Índices de datos.</li>
+<li>Bases de datos.</li>
+<li>Gestión jerárquica.</li>
+</ul>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>Ejemplos Resueltos</h2>
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 1 · Nodo BST</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+
+<pre><code>class Nodo {
+
+    int dato;
+    Nodo izquierdo;
+    Nodo derecho;
+
+}</code></pre>
+
+</div>
+
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 2 · Crear Árbol</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+
+<pre><code>Nodo raiz = null;</code></pre>
+
+</div>
+
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 3 · Insertar Nodo</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+
+<pre><code>public Nodo insertar(Nodo raiz, int valor){
+
+    if(raiz == null){
+        Nodo nuevo = new Nodo();
+        nuevo.dato = valor;
+        return nuevo;
+    }
+
+    if(valor < raiz.dato){
+        raiz.izquierdo = insertar(raiz.izquierdo, valor);
+    } else {
+        raiz.derecho = insertar(raiz.derecho, valor);
+    }
+
+    return raiz;
+}</code></pre>
+
+</div>
+
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 4 · Buscar Nodo</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+
+<pre><code>public boolean buscar(Nodo raiz, int valor){
+
+    if(raiz == null){
+        return false;
+    }
+
+    if(raiz.dato == valor){
+        return true;
+    }
+
+    if(valor < raiz.dato){
+        return buscar(raiz.izquierdo, valor);
+    } else {
+        return buscar(raiz.derecho, valor);
+    }
+}</code></pre>
+
+</div>
+
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 5 · Recorrido InOrden</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+
+<pre><code>inOrden(raiz.izquierdo);
+
+System.out.println(raiz.dato);
+
+inOrden(raiz.derecho);</code></pre>
+
+</div>
+
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 6 · Encontrar Mínimo</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+
+<pre><code>while(nodo.izquierdo != null){
+    nodo = nodo.izquierdo;
+}</code></pre>
+
+</div>
+
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 7 · Encontrar Máximo</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+
+<pre><code>while(nodo.derecho != null){
+    nodo = nodo.derecho;
+}</code></pre>
+
+</div>
+
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 8 · Altura BST</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+
+<pre><code>int altura(Nodo nodo){
+
+    if(nodo == null){
+        return 0;
+    }
+
+    int izq = altura(nodo.izquierdo);
+    int der = altura(nodo.derecho);
+
+    return 1 + Math.max(izq, der);
+}</code></pre>
+
+</div>
+
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 9 · Eliminar Nodo</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+
+<pre><code>raiz = null;</code></pre>
+
+</div>
+
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 10 · BST Completo</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+
+<pre><code>Nodo raiz = new Nodo();
+
+raiz.dato = 50;</code></pre>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>Retos Propuestos</h2>
+
+<div class="challenge-card">
+
+<h3>Reto 1 · Insertar Datos</h3>
+<p>Inserta 5 nodos en un BST.</p>
+<div class="tip">Recomendación: usa comparación menor/mayor.</div>
+
+</div>
+
+<div class="challenge-card">
+
+<h3>Reto 2 · Buscar Nodo</h3>
+<p>Busca un valor dentro del árbol.</p>
+<div class="tip">Recomendación: usa recursividad.</div>
+
+</div>
+
+<div class="challenge-card">
+
+<h3>Reto 3 · Recorrido InOrden</h3>
+<p>Implementa el recorrido InOrden.</p>
+<div class="tip">Recomendación: izquierda, raíz, derecha.</div>
+
+</div>
+
+<div class="challenge-card">
+
+<h3>Reto 4 · Encontrar Máximo</h3>
+<p>Encuentra el valor mayor del BST.</p>
+<div class="tip">Recomendación: recorre a la derecha.</div>
+
+</div>
+
+<div class="challenge-card">
+
+<h3>Reto 5 · Calcular Altura</h3>
+<p>Calcula la altura del árbol.</p>
+<div class="tip">Recomendación: usa Math.max().</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>Video Explicativo</h2>
+
+<div class="video-container">
+
+<iframe
+src="https://www.youtube.com/embed/NGRb3I1i5sA"
+title="BST"
+loading="lazy"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+<p>
+Manual Web de Estructura de Datos · 2026
+</p>
+
+</footer>
+
+<script src="../js/main.js"></script>
+
+</body>
+</html>

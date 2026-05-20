@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Colas · Manual Web</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+<div class="background-blur blur-1"></div>
+<div class="background-blur blur-2"></div>
+
+<header class="hero small-hero">
+
+    <h1>Colas (Queue)</h1>
+
+    <p>
+        Aprende cómo funcionan las colas, el procesamiento FIFO y la gestión de elementos.
+    </p>
+
+    <a href="../index.html" class="btn-primary">
+        ⬅ Volver al Inicio
+    </a>
+
+</header>
+
+<main class="container">
+
+<section class="section">
+
+    <h2>Documentación</h2>
+
+    <div class="glass-box">
+
+        <h3>¿Qué es una Cola?</h3>
+        <p>
+            Una cola es una estructura de datos que sigue el principio FIFO (First In First Out).
+        </p>
+
+        <h3>Características</h3>
+        <ul>
+            <li>El primero en entrar es el primero en salir.</li>
+            <li>Inserción al final.</li>
+            <li>Eliminación al inicio.</li>
+            <li>Estructura lineal.</li>
+        </ul>
+
+        <h3>Casos de Uso</h3>
+        <ul>
+            <li>Impresoras.</li>
+            <li>Sistemas operativos.</li>
+            <li>Procesos en espera.</li>
+            <li>Atención al cliente.</li>
+        </ul>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <h2>Ejemplos Resueltos</h2>
+
+    <div class="example-card">
+        <div class="example-header">
+            <h3>Ejemplo 1 · Crear Cola</h3>
+            <button onclick="copyCode(this)">Copiar</button>
+        </div>
+        <pre><code>Queue&lt;Integer&gt; cola = new LinkedList&lt;&gt;();</code></pre>
+    </div>
+
+    <div class="example-card">
+        <div class="example-header">
+            <h3>Ejemplo 2 · Insertar Elemento</h3>
+            <button onclick="copyCode(this)">Copiar</button>
+        </div>
+        <pre><code>cola.offer(10);</code></pre>
+    </div>
+
+    <div class="example-card">
+        <div class="example-header">
+            <h3>Ejemplo 3 · Eliminar Elemento</h3>
+            <button onclick="copyCode(this)">Copiar</button>
+        </div>
+        <pre><code>cola.poll();</code></pre>
+    </div>
+
+    <div class="example-card">
+        <div class="example-header">
+            <h3>Ejemplo 4 · Ver Primer Elemento</h3>
+            <button onclick="copyCode(this)">Copiar</button>
+        </div>
+        <pre><code>System.out.println(cola.peek());</code></pre>
+    </div>
+
+    <div class="example-card">
+        <div class="example-header">
+            <h3>Ejemplo 5 · Verificar Vacía</h3>
+            <button onclick="copyCode(this)">Copiar</button>
+        </div>
+        <pre><code>System.out.println(cola.isEmpty());</code></pre>
+    </div>
+
+    <div class="example-card">
+        <div class="example-header">
+            <h3>Ejemplo 6 · Tamaño de la Cola</h3>
+            <button onclick="copyCode(this)">Copiar</button>
+        </div>
+        <pre><code>System.out.println(cola.size());</code></pre>
+    </div>
+
+    <div class="example-card">
+        <div class="example-header">
+            <h3>Ejemplo 7 · Recorrer Cola</h3>
+            <button onclick="copyCode(this)">Copiar</button>
+        </div>
+        <pre><code>for (Integer numero : cola) {
+    System.out.println(numero);
+}</code></pre>
+    </div>
+
+    <div class="example-card">
+        <div class="example-header">
+            <h3>Ejemplo 8 · Limpiar Cola</h3>
+            <button onclick="copyCode(this)">Copiar</button>
+        </div>
+        <pre><code>cola.clear();</code></pre>
+    </div>
+
+    <div class="example-card">
+        <div class="example-header">
+            <h3>Ejemplo 9 · Cola de Strings</h3>
+            <button onclick="copyCode(this)">Copiar</button>
+        </div>
+        <pre><code>Queue&lt;String&gt; nombres = new LinkedList&lt;&gt;();
+
+nombres.offer("Camilo");
+nombres.offer("Mauricio");</code></pre>
+    </div>
+
+    <div class="example-card">
+        <div class="example-header">
+            <h3>Ejemplo 10 · Cola Completa</h3>
+            <button onclick="copyCode(this)">Copiar</button>
+        </div>
+        <pre><code>Queue&lt;Integer&gt; cola = new LinkedList&lt;&gt;();
+
+cola.offer(1);
+cola.offer(2);
+
+System.out.println(cola.poll());</code></pre>
+    </div>
+
+</section>
+
+<section class="section">
+
+    <h2>Retos Propuestos</h2>
+
+    <div class="challenge-card">
+        <h3>Reto 1 · Insertar Datos</h3>
+        <p>Inserta 5 elementos en una cola.</p>
+        <div class="tip">Usa offer().</div>
+    </div>
+
+    <div class="challenge-card">
+        <h3>Reto 2 · Eliminar Elemento</h3>
+        <p>Elimina el primer elemento.</p>
+        <div class="tip">Usa poll().</div>
+    </div>
+
+    <div class="challenge-card">
+        <h3>Reto 3 · Mostrar Inicio</h3>
+        <p>Muestra el primer elemento sin eliminarlo.</p>
+        <div class="tip">Usa peek().</div>
+    </div>
+
+    <div class="challenge-card">
+        <h3>Reto 4 · Recorrer Cola</h3>
+        <p>Recorre todos los elementos de la cola.</p>
+        <div class="tip">Usa for-each.</div>
+    </div>
+
+    <div class="challenge-card">
+        <h3>Reto 5 · Verificar Vacía</h3>
+        <p>Comprueba si la cola está vacía.</p>
+        <div class="tip">Usa isEmpty().</div>
+    </div>
+
+</section>
+
+<section class="section">
+
+    <h2>Video Explicativo</h2>
+
+    <div class="video-container">
+
+        <iframe
+        src="https://www.youtube.com/embed/hC2oesghp4o"
+        title="Colas en Java"
+        loading="lazy"
+        allowfullscreen>
+        </iframe>
+
+    </div>
+
+</section>
+
+</main>
+
+<footer class="footer">
+    <p>Manual Web de Estructura de Datos · 2026</p>
+</footer>
+
+<script src="../js/main.js"></script>
+
+</body>
+</html>

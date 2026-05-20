@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Árboles Binarios · Manual Web</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+<div class="background-blur blur-1" aria-hidden="true"></div>
+<div class="background-blur blur-2" aria-hidden="true"></div>
+
+
+<header class="hero small-hero">
+
+    <h1>Árboles Binarios</h1>
+
+    <p>
+    Aprende cómo funcionan los árboles binarios, nodos jerárquicos y recorridos en estructuras arbóreas.
+    </p>
+
+    <a href="../index.html" class="btn-primary">
+    ⬅ Volver al Inicio
+    </a>
+
+</header>
+
+
+<main class="container">
+
+
+<section class="section" aria-labelledby="doc-titulo">
+
+<h2 id="doc-titulo">Documentación</h2>
+
+<div class="glass-box">
+
+<h3>¿Qué es un Árbol Binario?</h3>
+
+<p>
+Un árbol binario es una estructura jerárquica donde cada nodo puede tener máximo dos hijos.
+</p>
+
+<h3>Características</h3>
+
+<ul>
+<li>Estructura jerárquica.</li>
+<li>Nodo raíz.</li>
+<li>Subárbol izquierdo y derecho.</li>
+<li>Recorridos especializados.</li>
+</ul>
+
+<h3>Casos de Uso</h3>
+
+<ul>
+<li>Sistemas de búsqueda.</li>
+<li>Bases de datos.</li>
+<li>Compiladores.</li>
+<li>Organización jerárquica.</li>
+</ul>
+
+</div>
+
+</section>
+
+
+<section class="section" aria-labelledby="ejemplos-titulo">
+
+<h2 id="ejemplos-titulo">Ejemplos Resueltos</h2>
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 1 · Nodo Árbol</h3>
+<button onclick="copyCode(this)" aria-label="Copiar código del Ejemplo 1">Copiar</button>
+</div>
+
+<pre><code>class Nodo {
+
+    int dato;
+    Nodo izquierdo;
+    Nodo derecho;
+
+}</code></pre>
+
+</div>
+
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 2 · Crear Raíz</h3>
+<button onclick="copyCode(this)" aria-label="Copiar código del Ejemplo 2">Copiar</button>
+</div>
+
+<pre><code>Nodo raiz = new Nodo();</code></pre>
+
+</div>
+
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 3 · Insertar Hijos</h3>
+<button onclick="copyCode(this)" aria-label="Copiar código del Ejemplo 3">Copiar</button>
+</div>
+
+<pre><code>raiz.izquierdo = new Nodo();
+raiz.derecho = new Nodo();</code></pre>
+
+</div>
+
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 4 · Recorrido InOrden</h3>
+<button onclick="copyCode(this)" aria-label="Copiar código del Ejemplo 4">Copiar</button>
+</div>
+
+<pre><code>inOrden(raiz.izquierdo);
+
+System.out.println(raiz.dato);
+
+inOrden(raiz.derecho);</code></pre>
+
+</div>
+
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 5 · Recorrido PreOrden</h3>
+<button onclick="copyCode(this)" aria-label="Copiar código del Ejemplo 5">Copiar</button>
+</div>
+
+<pre><code>System.out.println(raiz.dato);
+
+preOrden(raiz.izquierdo);
+
+preOrden(raiz.derecho);</code></pre>
+
+</div>
+
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 6 · Recorrido PostOrden</h3>
+<button onclick="copyCode(this)" aria-label="Copiar código del Ejemplo 6">Copiar</button>
+</div>
+
+<pre><code>postOrden(raiz.izquierdo);
+
+postOrden(raiz.derecho);
+
+System.out.println(raiz.dato);</code></pre>
+
+</div>
+
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 7 · Verificar Vacío</h3>
+<button onclick="copyCode(this)" aria-label="Copiar código del Ejemplo 7">Copiar</button>
+</div>
+
+<pre><code>if(raiz == null){
+
+    System.out.println("Vacío");
+
+}</code></pre>
+
+</div>
+
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 8 · Altura Árbol</h3>
+<button onclick="copyCode(this)" aria-label="Copiar código del Ejemplo 8">Copiar</button>
+</div>
+
+<pre><code>int altura(Nodo nodo){
+
+    if(nodo == null){
+        return 0;
+    }
+
+    int izquierda = altura(nodo.izquierdo);
+    int derecha = altura(nodo.derecho);
+
+    return 1 + Math.max(izquierda, derecha);
+}</code></pre>
+
+</div>
+
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 9 · Buscar Nodo</h3>
+<button onclick="copyCode(this)" aria-label="Copiar código del Ejemplo 9">Copiar</button>
+</div>
+
+<pre><code>if(raiz == null){
+    return false;
+}
+
+if(raiz.dato == valor){
+    return true;
+}</code></pre>
+
+</div>
+
+
+<div class="example-card">
+
+<div class="example-header">
+<h3>Ejemplo 10 · Árbol Completo</h3>
+<button onclick="copyCode(this)" aria-label="Copiar código del Ejemplo 10">Copiar</button>
+</div>
+
+<pre><code>Nodo raiz = new Nodo();
+
+raiz.izquierdo = new Nodo();
+raiz.derecho = new Nodo();</code></pre>
+
+</div>
+
+</section>
+
+
+<section class="section" aria-labelledby="retos-titulo">
+
+<h2 id="retos-titulo">Retos Propuestos</h2>
+
+<div class="challenge-card">
+
+<h3>Reto 1 · Crear Árbol</h3>
+<p>Crea un árbol binario con 3 niveles.</p>
+<div class="tip">Recomendación: Usa nodos hijos.</div>
+
+</div>
+
+<div class="challenge-card">
+
+<h3>Reto 2 · Recorrido InOrden</h3>
+<p>Implementa el recorrido InOrden.</p>
+<div class="tip">Recomendación: izquierda, raíz, derecha.</div>
+
+</div>
+
+<div class="challenge-card">
+
+<h3>Reto 3 · Buscar Nodo</h3>
+<p>Busca un valor dentro del árbol.</p>
+<div class="tip">Recomendación: usa recursividad.</div>
+
+</div>
+
+<div class="challenge-card">
+
+<h3>Reto 4 · Calcular Altura</h3>
+<p>Calcula la altura del árbol.</p>
+<div class="tip">Recomendación: usa recursividad.</div>
+
+</div>
+
+<div class="challenge-card">
+
+<h3>Reto 5 · Contar Nodos</h3>
+<p>Cuenta todos los nodos del árbol.</p>
+<div class="tip">Recomendación: suma recursiva.</div>
+
+</div>
+
+</section>
+
+
+<section class="section" aria-labelledby="video-titulo">
+
+<h2 id="video-titulo">Video Explicativo</h2>
+
+<div class="video-container">
+
+<iframe
+src="https://www.youtube.com/embed/Ypdzn-BDPgA"
+title="Árboles Binarios"
+loading="lazy"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+<p>
+Manual Web de Estructura de Datos · 2026
+</p>
+
+</footer>
+
+<script src="../js/main.js"></script>
+
+</body>
+</html>

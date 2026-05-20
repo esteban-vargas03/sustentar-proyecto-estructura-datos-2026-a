@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tablas Hash · Manual Web</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+<div class="background-blur blur-1"></div>
+<div class="background-blur blur-2"></div>
+
+<header class="hero">
+
+    <h1>Tablas Hash</h1>
+
+    <p>
+        Aprende cómo funcionan las tablas hash, el uso de claves y el acceso rápido a datos.
+    </p>
+
+    <a href="../index.html" class="btn-primary">
+        ⬅ Volver al Inicio
+    </a>
+
+</header>
+
+<main class="container">
+
+<section class="section">
+
+    <h2>Documentación</h2>
+
+    <div class="glass-box">
+
+        <h3>¿Qué es una Tabla Hash?</h3>
+        <p>
+            Una tabla hash almacena datos usando claves únicas que permiten acceso rápido a los valores.
+        </p>
+
+        <h3>Características</h3>
+        <ul>
+            <li>Acceso rápido a datos.</li>
+            <li>Pares clave–valor.</li>
+            <li>Búsquedas eficientes.</li>
+            <li>Uso de función hash.</li>
+        </ul>
+
+        <h3>Casos de Uso</h3>
+        <ul>
+            <li>Diccionarios.</li>
+            <li>Bases de datos.</li>
+            <li>Autenticación.</li>
+            <li>Caché de aplicaciones.</li>
+        </ul>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <h2>Ejemplos Resueltos</h2>
+
+    <div class="example-card">
+
+        <div class="example-header">
+            <h3>Ejemplo 1 · Crear HashMap</h3>
+        </div>
+
+        <pre><code>HashMap&lt;Integer, String&gt; mapa = new HashMap&lt;&gt;();</code></pre>
+    </div>
+
+    <div class="example-card">
+        <div class="example-header">
+            <h3>Ejemplo 2 · Insertar</h3>
+        </div>
+        <pre><code>mapa.put(1, "Juan");</code></pre>
+    </div>
+
+    <div class="example-card">
+        <div class="example-header">
+            <h3>Ejemplo 3 · Obtener</h3>
+        </div>
+        <pre><code>System.out.println(mapa.get(1));</code></pre>
+    </div>
+
+    <div class="example-card">
+        <div class="example-header">
+            <h3>Ejemplo 4 · Eliminar</h3>
+        </div>
+        <pre><code>mapa.remove(1);</code></pre>
+    </div>
+
+</section>
+
+<section class="section">
+
+    <h2>Retos Propuestos</h2>
+
+    <div class="challenge-card">
+        <h3>Reto 1</h3>
+        <p>Inserta 5 elementos en un HashMap.</p>
+        <div class="tip">Usa put()</div>
+    </div>
+
+    <div class="challenge-card">
+        <h3>Reto 2</h3>
+        <p>Verifica si una clave existe.</p>
+        <div class="tip">Usa containsKey()</div>
+    </div>
+
+</section>
+
+<section class="section">
+
+    <h2>Video Explicativo</h2>
+
+    <div class="video-container">
+        <iframe
+        src="https://www.youtube.com/embed/0x3HMwYU5iw"
+        title="Tablas Hash"
+        allowfullscreen>
+        </iframe>
+    </div>
+
+</section>
+
+</main>
+
+<footer class="footer">
+    <p>Manual Web de Estructura de Datos · 2026</p>
+</footer>
+
+</body>
+</html>

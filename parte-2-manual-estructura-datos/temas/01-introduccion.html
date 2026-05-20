@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Introducción a las Estructuras de Datos: conceptos fundamentales, importancia y aplicaciones en programación.">
+
+<title>Introducción · Manual Web</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+<div class="background-blur blur-1"></div>
+<div class="background-blur blur-2"></div>
+
+<header class="hero small-hero">
+
+<h1>Introducción a las Estructuras de Datos</h1>
+
+<p>Conceptos fundamentales sobre las estructuras de datos, su importancia y aplicaciones en programación.</p>
+
+<a href="../index.html" class="btn-primary">⬅ Volver al Inicio</a>
+
+</header>
+
+<main class="container">
+
+<section class="section">
+<h2>Documentación</h2>
+
+<div class="glass-box">
+
+<h3>¿Qué son las estructuras de datos?</h3>
+<p>Son formas organizadas de almacenar, gestionar y manipular información dentro de un programa.</p>
+
+<h3>Utilidad</h3>
+<p>Permiten optimizar operaciones como búsqueda, inserción, eliminación y organización de datos.</p>
+
+<h3>Características</h3>
+<ul>
+<li>Organizan información de forma eficiente.</li>
+<li>Mejoran el rendimiento de los programas.</li>
+<li>Facilitan el desarrollo de algoritmos.</li>
+</ul>
+
+</div>
+</section>
+
+<section class="section">
+<h2>Ejemplos Resueltos</h2>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 1 · Declarar un Array</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<p>Declaración básica de un array en Java.</p>
+<pre><code>
+public class Main {
+    public static void main(String[] args) {
+        int[] numeros = {1, 2, 3, 4};
+        for (int n : numeros) {
+            System.out.println(n);
+        }
+    }
+}
+</code></pre>
+</div>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 2 · Sumar valores</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<p>Suma todos los elementos de un array.</p>
+<pre><code>
+public class Main {
+    public static void main(String[] args) {
+        int[] numeros = {5, 10, 15};
+        int suma = 0;
+
+        for (int n : numeros) {
+            suma += n;
+        }
+
+        System.out.println(suma);
+    }
+}
+</code></pre>
+</div>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 3 · Buscar elemento</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<p>Busca un número dentro de un array.</p>
+<pre><code>
+public class Main {
+    public static void main(String[] args) {
+        int[] numeros = {2, 4, 6, 8};
+        int buscar = 6;
+        boolean encontrado = false;
+
+        for (int n : numeros) {
+            if (n == buscar) {
+                encontrado = true;
+            }
+        }
+
+        System.out.println(encontrado);
+    }
+}
+</code></pre>
+</div>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 4 · Recorrer con índice</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<p>Recorre un array usando índices.</p>
+<pre><code>
+public class Main {
+    public static void main(String[] args) {
+        int[] numeros = {1, 2, 3, 4};
+
+        for (int i = 0; i < numeros.length; i++) {
+            System.out.println(numeros[i]);
+        }
+    }
+}
+</code></pre>
+</div>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 5 · Multiplicar elementos</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<p>Multiplica cada elemento por 2.</p>
+<pre><code>
+public class Main {
+    public static void main(String[] args) {
+        int[] numeros = {2, 3, 4};
+
+        for (int n : numeros) {
+            System.out.println(n * 2);
+        }
+    }
+}
+</code></pre>
+</div>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 6 · Tamaño del array</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<p>Muestra el tamaño del array.</p>
+<pre><code>
+public class Main {
+    public static void main(String[] args) {
+        int[] numeros = {1, 2, 3, 4, 5};
+        System.out.println(numeros.length);
+    }
+}
+</code></pre>
+</div>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 7 · Array de textos</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<p>Recorre un array de Strings.</p>
+<pre><code>
+public class Main {
+    public static void main(String[] args) {
+        String[] nombres = {"Ana", "Luis", "Pedro"};
+
+        for (String n : nombres) {
+            System.out.println(n);
+        }
+    }
+}
+</code></pre>
+</div>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 8 · Número menor</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<p>Encuentra el número menor.</p>
+<pre><code>
+public class Main {
+    public static void main(String[] args) {
+        int[] numeros = {8, 2, 10, 1};
+        int menor = numeros[0];
+
+        for (int n : numeros) {
+            if (n < menor) {
+                menor = n;
+            }
+        }
+
+        System.out.println(menor);
+    }
+}
+</code></pre>
+</div>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 9 · Contar elementos</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<p>Cuenta los elementos del array.</p>
+<pre><code>
+public class Main {
+    public static void main(String[] args) {
+        int[] numeros = {1, 2, 3, 4};
+        int contador = 0;
+
+        for (int n : numeros) {
+            contador++;
+        }
+
+        System.out.println(contador);
+    }
+}
+</code></pre>
+</div>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 10 · Matriz bidimensional</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<p>Acceso a una matriz 2D.</p>
+<pre><code>
+public class Main {
+    public static void main(String[] args) {
+        int[][] matriz = {
+            {1, 2},
+            {3, 4}
+        };
+
+        System.out.println(matriz[1][1]);
+    }
+}
+</code></pre>
+</div>
+
+</section>
+
+<section class="section">
+<h2>Retos Propuestos</h2>
+
+<div class="challenge-card">
+<h3>Reto 1 · Promedio</h3>
+<p>Calcula el promedio de un array.</p>
+</div>
+
+<div class="challenge-card">
+<h3>Reto 2 · Mayor valor</h3>
+<p>Encuentra el número mayor en un array.</p>
+</div>
+
+<div class="challenge-card">
+<h3>Reto 3 · Invertir array</h3>
+<p>Imprime el array en orden inverso.</p>
+</div>
+
+<div class="challenge-card">
+<h3>Reto 4 · Contar pares</h3>
+<p>Cuenta los números pares.</p>
+</div>
+
+<div class="challenge-card">
+<h3>Reto 5 · Ordenar array</h3>
+<p>Ordena los elementos de menor a mayor.</p>
+</div>
+
+</section>
+
+<section class="section">
+<h2>Video Explicativo</h2>
+
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/GOl2P7ZuSHs"
+title="Arrays en Java" allowfullscreen></iframe>
+</div>
+
+</section>
+
+</main>
+
+<footer class="footer">
+<p>Manual Web de Estructura de Datos · 2026</p>
+</footer>
+
+<script src="../js/main.js"></script>
+
+</body>
+</html>

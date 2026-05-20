@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Listas dobles y circulares en Java: nodos con referencias bidireccionales y estructuras circulares.">
+
+<title>Listas Dobles y Circulares · Manual Web</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+<div class="background-blur blur-1"></div>
+<div class="background-blur blur-2"></div>
+
+<header class="hero small-hero">
+
+<h1>Listas Dobles y Circulares</h1>
+
+<p>
+Aprende cómo funcionan las listas dobles, referencias bidireccionales y listas circulares.
+</p>
+
+<a href="../index.html" class="btn-primary">⬅ Volver al Inicio</a>
+
+</header>
+
+<main class="container">
+
+<section class="section">
+<h2>Documentación</h2>
+
+<div class="glass-box">
+
+<h3>Listas Dobles</h3>
+<p>Cada nodo tiene referencia al siguiente y al anterior.</p>
+
+<h3>Listas Circulares</h3>
+<p>El último nodo apunta nuevamente al primero.</p>
+
+<h3>Características</h3>
+<ul>
+<li>Recorrido bidireccional.</li>
+<li>Estructura dinámica.</li>
+<li>Conexión circular opcional.</li>
+<li>Inserciones eficientes.</li>
+</ul>
+
+<h3>Casos de uso</h3>
+<ul>
+<li>Reproductores de música.</li>
+<li>Sistemas operativos.</li>
+<li>Buffers circulares.</li>
+<li>Gestión de memoria.</li>
+</ul>
+
+</div>
+</section>
+
+<section class="section">
+<h2>Ejemplos Resueltos</h2>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 1 · Nodo doble</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<pre><code>
+class Nodo {
+    int dato;
+    Nodo siguiente;
+    Nodo anterior;
+}
+</code></pre>
+</div>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 2 · Lista doble</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<pre><code>
+class ListaDoble {
+    Nodo cabeza;
+}
+</code></pre>
+</div>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 3 · Insertar inicio</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<pre><code>
+public void insertarInicio(int dato) {
+    Nodo nuevo = new Nodo();
+    nuevo.dato = dato;
+
+    nuevo.siguiente = cabeza;
+
+    if (cabeza != null) {
+        cabeza.anterior = nuevo;
+    }
+
+    cabeza = nuevo;
+}
+</code></pre>
+</div>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 4 · Recorrer adelante</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<pre><code>
+Nodo actual = cabeza;
+
+while (actual != null) {
+    System.out.println(actual.dato);
+    actual = actual.siguiente;
+}
+</code></pre>
+</div>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 5 · Recorrer atrás</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<pre><code>
+Nodo actual = cabeza;
+
+while (actual != null && actual.siguiente != null) {
+    actual = actual.siguiente;
+}
+
+while (actual != null) {
+    System.out.println(actual.dato);
+    actual = actual.anterior;
+}
+</code></pre>
+</div>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 6 · Lista circular</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<pre><code>
+ultimo.siguiente = cabeza;
+</code></pre>
+</div>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 7 · Nodo circular</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<pre><code>
+Nodo nodo = new Nodo();
+nodo.siguiente = nodo;
+</code></pre>
+</div>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 8 · Verificar circularidad</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<pre><code>
+if (actual.siguiente == cabeza) {
+    System.out.println("Circular");
+}
+</code></pre>
+</div>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 9 · Eliminar nodo</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<pre><code>
+actual.anterior.siguiente = actual.siguiente;
+actual.siguiente.anterior = actual.anterior;
+</code></pre>
+</div>
+
+<div class="example-card">
+<div class="example-header">
+<h3>Ejemplo 10 · Contar nodos</h3>
+<button onclick="copyCode(this)">Copiar</button>
+</div>
+<pre><code>
+int contador = 0;
+Nodo actual = cabeza;
+
+while (actual != null) {
+    contador++;
+    actual = actual.siguiente;
+}
+</code></pre>
+</div>
+
+</section>
+
+<section class="section">
+<h2>Retos Propuestos</h2>
+
+<div class="challenge-card"><h3>Reto 1</h3><p>Insertar nodo al final en lista doble.</p></div>
+<div class="challenge-card"><h3>Reto 2</h3><p>Convertir lista simple en circular.</p></div>
+<div class="challenge-card"><h3>Reto 3</h3><p>Recorrer lista doble hacia atrás.</p></div>
+<div class="challenge-card"><h3>Reto 4</h3><p>Contar nodos en lista circular.</p></div>
+<div class="challenge-card"><h3>Reto 5</h3><p>Eliminar nodo intermedio.</p></div>
+
+</section>
+
+<section class="section">
+<h2>Video Explicativo</h2>
+
+<div class="video-container">
+<iframe
+src="https://www.youtube.com/embed/Ou7Z4qV9K0w"
+title="Listas dobles y circulares"
+allowfullscreen>
+</iframe>
+</div>
+
+</section>
+
+</main>
+
+<footer class="footer">
+<p>Manual Web de Estructura de Datos · 2026</p>
+</footer>
+
+<script src="../js/main.js"></script>
+
+</body>
+</html>
